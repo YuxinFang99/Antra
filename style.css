@@ -1,46 +1,103 @@
-*{
-    font-family: sans-serif;
-    margin: 0%;
+* {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+html {
+    font-size: 62.5%;
     box-sizing: border-box;
+
+  }
+  
+
+body {
+    font-family: system-ui;
+    color: #555;
+    
+    min-height: 100vh;
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.container {
+    box-sizing: border-box;
+    position: relative;
+    
+  }
+  
+.namecard-container{
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 1s;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-
-.main-header{
-    background-color: #000;
-    padding: 20px;
-}
-
-.second-header{
-    background-color: #c6bfbf;
-    padding: 40px;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.paragraph{
-    padding: 30px;
+.person {
+    box-sizing: border-box;
+    border: blue solid thin;
+    width: 700px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-bottom: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
+    background-color: #fff;
+    /* box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1); */
+    font-size: 1.8rem;
+   
+    border-radius: 0.7rem;
+    margin:  3rem;
+    /* overflow: hidden; */
+  }
+  
 
+.image{
+  padding:  20px;
 }
-
-h1, p{
-    padding: 10px;
-}
-
-a{
-    color: white;
-    padding: 20px;
-}
-footer{
-
-    background-color:#0b4d14;
-    padding: 10px;
+.portrait {
+    box-shadow: blue 1.95px 1.95px 2.6px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 3rem;
+    
+  }
+
+.contact__data{
+    padding: 15px;
+    padding-right: 100px;
+  
+}
+
+.name{
+  padding: 3px;
+}
+
+.email{
+  padding: 3px;
+}
+
+.phone{
+  padding: 3px;
+  padding-bottom: 15px;
+}
+
+.dataOfBirth{
+  padding: 5px;
+}
+
+.reload{
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  padding: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.hidden{
+  display: none;
 }
