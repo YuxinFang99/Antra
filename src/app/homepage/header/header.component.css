@@ -1,0 +1,13 @@
+.a{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container-fluid{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    background-color: rgb(231, 224, 224);
+    padding: 15px;
+}

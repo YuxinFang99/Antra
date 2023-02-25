@@ -1,0 +1,15 @@
+.book-card{
+    display: flex;
+}
+.book-card:hover {
+    background-color: gainsboro;
+    transform: translateY(2px);
+    box-shadow: 5px 5px gray;
+    border-radius: 10px;
+}
+.book-img{
+    margin: 10px;
+}
+.book-info{
+    margin: 10px;
+}

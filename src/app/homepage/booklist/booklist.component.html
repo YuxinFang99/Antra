@@ -1,0 +1,22 @@
+<div class="book-card" (click)="getName()">
+    <div class="book-img">
+        <img 
+            [src]="book.imageUrl"
+            alt="{{ book.title }}"
+            style="max-height: 300px;"
+        />
+    </div>
+    <div class="book-info">
+        <div class="title">
+            <h1>{{ book.title }}</h1>
+        </div>
+
+        <div class="detail-info">
+            <p><b>Author:</b> {{ book.author }}</p>
+            <p><b>Publisher:</b> {{ book.publisher }}</p>
+            <p><b>Published Date:</b> {{ book.publishDate }}</p>
+            <p><b>Description:</b> {{ book.description }}</p>
+        </div>
+
+    </div>
+</div>

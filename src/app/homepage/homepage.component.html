@@ -1,0 +1,11 @@
+<app-header (selectedFeature)="onNavigate($event)"></app-header>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <app-search *ngIf="loadedFeature === 'home'"></app-search>
+        <app-wishlist *ngIf="loadedFeature !== 'home'"></app-wishlist>
+      </div>
+    </div>
+  </div>
+  
+<!-- <app-search></app-search> -->

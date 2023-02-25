@@ -1,0 +1,9 @@
+.content{
+    display: flex;
+}
+.header{
+    margin: 20px
+}
+.button{
+    margin: 10px;
+}
