@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { Observable, Subject, of, map, tap } from 'rxjs';
+import { Observable, Subject, of, map, tap, BehaviorSubject } from 'rxjs';
 import { baseUrl } from '../app.module';
 import { Book } from '../interface/interface.component';
 
@@ -10,8 +10,8 @@ export class BookService {
   booklist: Book[] = [];
   booklist$: Subject<Book[]> = new Subject();
 
-  wishlist: any = [];
-  wishlist$: Subject<Book[]> = new Subject();
+  wishlist: Book[] = [];
+  wishlist$: Subject<Book[]> = new BehaviorSubject(this.wishlist);
 
   constructor(
     private http: HttpClient,
@@ -40,12 +40,17 @@ export class BookService {
   }
 
   addWishlistBook(wbook: Book) {
-    for (let book of this.wishlist) {
-      if (JSON.stringify(wbook) !== JSON.stringify(book)) {
-        this.wishlist.push(wbook);
-      }
-      this.wishlist$.next(this.wishlist);
-    }
+    const book = this.wishlist.find(book => book.title === wbook.title);
+    if (book) return;
+    this.wishlist.push(wbook);
+    this.wishlist$.next(this.wishlist);
+
+    // for (let book of this.wishlist) {
+    //   if ( JSON.stringify(wbook) !== JSON.stringify(book)) {
+    //     this.wishlist.push(wbook);
+    //   }
+    //   this.wishlist$.next(this.wishlist);
+    // }
   }
 
   deleteWishlistBook(wbook: Book) {

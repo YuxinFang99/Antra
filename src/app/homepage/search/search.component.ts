@@ -30,7 +30,7 @@ export class SearchComponent {
 
 
   constructor(public bookService: BookService) {}
-
+  
   ngOnInit(): void {
     this.subsq = fromEvent(this.inputbox.nativeElement, 'keyup')
       .pipe(

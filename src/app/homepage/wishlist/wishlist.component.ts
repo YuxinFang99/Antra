@@ -10,6 +10,10 @@ export class WishlistComponent {
   @Input() wbook!: Book;
   @Output() nameEmiter = new EventEmitter();
 
+  // ngOnInit() {
+  //   console.log(this.wbook);
+  // }
+
   getWbookName() {
     this.nameEmiter.emit(this.wbook);
     console.log(this.wbook);

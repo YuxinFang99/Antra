@@ -10,6 +10,7 @@
 <div class="content">
     <div class="booklist">
       <app-booklist
+   
         *ngFor="let bookEl of bookService.booklist$ | async"
         [book]="bookEl" 
         (nameEmiter)="addingBook($event)"
@@ -17,11 +18,13 @@
     </div>
 
     <div class="wishlist">
-        <app-wishlist
-        *ngFor="let wbookEl of bookService.wishlist$ | async"
-        [wbook]="wbookEl"
-        (nameEmiter)="deletingBook($event)"
-        >
-        </app-wishlist>
+      <h1>My Reading Wishlist</h1>
+
+          <app-wishlist
+          *ngFor="let wbookEl of bookService.wishlist$ | async"
+          [wbook]="wbookEl"
+          (nameEmiter)="deletingBook($event)"
+          >
+          </app-wishlist>
     </div>
 </div>

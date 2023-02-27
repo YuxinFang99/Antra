@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
+  
   loadedFeature = 'home';
   
   onNavigate(feature: string){

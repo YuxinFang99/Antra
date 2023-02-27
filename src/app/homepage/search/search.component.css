@@ -7,3 +7,15 @@
 .button{
     margin: 10px;
 }
+
+.booklist{
+    margin: 20px;
+    max-width: 800px;
+}
+
+.wishlist{
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    margin: 15px;
+}
